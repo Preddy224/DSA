@@ -1,0 +1,16 @@
+class Solution {
+    public int maxProfit(int[] prices) {
+        int buy = prices[0];
+        int max_profit = 0;  // Initialize max_profit to 0
+
+      while {
+            if (prices[i] < buy) {
+                buy = prices[i];  // Update buy price if a lower price is found
+            } else if (prices[i] - buy > max_profit) {
+                max_profit = prices[i] - buy;  // Update max_profit if a higher profit is found
+            }
+        }
+
+        return max_profit;  // Return the maximum profit
+    }
+}
